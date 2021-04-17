@@ -4,6 +4,12 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     font: {
+      size: {
+        s: string;
+        m: string;
+        l: string;
+        xl: string;
+      };
       weight: {
         light: string;
         regular: string;
@@ -37,6 +43,12 @@ declare module "styled-components" {
 export const theme = {
   font: {
     weight: { light: "300", regular: "400", semibold: "600", bold: "700" },
+    size: {
+      s: "12px",
+      m: "16px",
+      l: "24px",
+      xl: "36px",
+    },
     fontFamily: {
       primary: `"Montserrat", sans-serif`,
       secondary: ``,

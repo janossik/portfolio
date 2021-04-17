@@ -11,7 +11,7 @@ I created this page with [Create React App](https://github.com/facebook/create-r
 
 ## Testing Application
 
-For testing, I used the Jest and React Testing Library, which was already included in the Create React App
+For testing, I used the Jest and React Testing Library, which were already included in the Create React App
 
 ## Available Scripts
 

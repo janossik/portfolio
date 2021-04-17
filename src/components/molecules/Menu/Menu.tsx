@@ -24,6 +24,7 @@ const Wrapper = styled.nav<{ active: boolean }>`
     color: ${({ theme }) => theme.color.background};
   }
   @media (min-width: ${({ theme }) => theme.screenSize.desktop.small}) {
+    position: absolute;
     left: 50%;
     height: 50px;
     width: 700px;
