@@ -16,5 +16,8 @@ const Hamburger = styled.button`
   @media (min-width: ${({ theme }) => theme.screenSize.desktop.small}) {
     display: none;
   }
+  @media print {
+    display: none;
+  }
 `;
 export default Hamburger;

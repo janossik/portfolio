@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import MainTemplate from "view/templates/MainTemplate";
-import logo from "assets/logo512.png";
+import logo from "assets/logo.svg";
 import Hero from "components/organism/Hero/Hero";
 
 const Wrapper = styled.article``;

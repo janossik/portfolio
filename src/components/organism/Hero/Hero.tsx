@@ -11,7 +11,6 @@ const Wrapper = styled.article`
     border: 5px solid ${({ theme }) => theme.color.primary};
     border-radius: 50%;
   }
-
   @media (max-width: ${({ theme }) => theme.screenSize.tablet}) {
     img {
       margin: 0 auto 30px auto;
@@ -25,6 +24,13 @@ const Wrapper = styled.article`
     }
   }
   @media (min-width: ${({ theme }) => theme.screenSize.desktop.small}) {
+  }
+  @media print {
+    flex-direction: row;
+    img {
+      margin-left: 0;
+      margin-right: 30px;
+    }
   }
 `;
 
