@@ -5,6 +5,7 @@ import { IHero } from "interface/interface";
 const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
   img {
     height: 200px;
     width: 200px;

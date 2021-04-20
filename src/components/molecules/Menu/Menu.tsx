@@ -47,13 +47,20 @@ const Wrapper = styled.nav<{ active: boolean }>`
 const Menu = ({ active, setActive }: IActiveState) => {
   return (
     <Wrapper active={active}>
-      <MenuLink to="#portfolio" onClick={() => setActive(false)}>
+      <MenuLink
+        to="portfolio"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        onClick={() => setActive(false)}
+      >
         Portfolio
       </MenuLink>
-      <MenuLink to="#bokcase" onClick={() => setActive(false)}>
+      <MenuLink to="/bokcase" onClick={() => setActive(false)}>
         Bokcase
       </MenuLink>
-      <MenuLink to="#contact" onClick={() => setActive(false)}>
+      <MenuLink to="/contact" onClick={() => setActive(false)}>
         Contact
       </MenuLink>
       <p>Where do you wanna go?</p>

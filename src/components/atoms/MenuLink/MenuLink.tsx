@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const MenuLink = styled(Link)`
   display: flex;
@@ -10,6 +10,8 @@ const MenuLink = styled(Link)`
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid ${({ theme }) => theme.color.background};
+  cursor: pointer;
+  user-select: none;
   &:first-child {
     border-top: 1px solid ${({ theme }) => theme.color.background};
   }

@@ -5,6 +5,9 @@ import { IComponentWithChildren } from "interface/interface";
 import logo from "assets/logo_v2.svg";
 
 const Wrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 40px 15px 10px 15px;
   &::after {
     content: " ";
