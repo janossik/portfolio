@@ -28,5 +28,8 @@ const CloseButton = styled.button`
     background-color: ${({ theme }) => theme.color.background};
     transform: translateY(-100%) rotate(45deg);
   }
+  @media print {
+    display: none;
+  }
 `;
 export default CloseButton;

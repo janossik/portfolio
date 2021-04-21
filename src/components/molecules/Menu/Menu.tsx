@@ -39,18 +39,28 @@ const Wrapper = styled.nav<{ active: boolean }>`
       display: none;
     }
   }
+  @media print {
+    display: none;
+  }
 `;
 
 const Menu = ({ active, setActive }: IActiveState) => {
   return (
     <Wrapper active={active}>
-      <MenuLink href="#portfolio" onClick={() => setActive(false)}>
+      <MenuLink
+        to="portfolio"
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        onClick={() => setActive(false)}
+      >
         Portfolio
       </MenuLink>
-      <MenuLink href="#bokcase" onClick={() => setActive(false)}>
+      <MenuLink to="/bokcase" onClick={() => setActive(false)}>
         Bokcase
       </MenuLink>
-      <MenuLink href="#contact" onClick={() => setActive(false)}>
+      <MenuLink to="/contact" onClick={() => setActive(false)}>
         Contact
       </MenuLink>
       <p>Where do you wanna go?</p>

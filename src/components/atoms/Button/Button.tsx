@@ -20,6 +20,9 @@ const Button = styled.button`
     color: ${({ theme }) => theme.color.background};
     background-color: ${({ theme }) => theme.color.primary};
   }
+  @media print {
+    display: none;
+  }
 `;
 
 export default Button;

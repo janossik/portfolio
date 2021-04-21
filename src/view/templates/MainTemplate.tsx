@@ -2,9 +2,12 @@ import styled from "styled-components";
 import GlobalStyle from "theme/GlobalStyle";
 import TopBar from "components/organism/TopBar/TopBar";
 import { IComponentWithChildren } from "interface/interface";
-import logo from "assets/logo512.png";
+import logo from "assets/logo_v2.svg";
 
 const Wrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 40px 15px 10px 15px;
   &::after {
     content: " ";
@@ -31,6 +34,11 @@ const Wrapper = styled.main`
   @media (min-width: ${({ theme }) => theme.screenSize.desktop}) {
     &::after {
       background-position: 60vw 30vh;
+    }
+  }
+  @media print {
+    &::after {
+      background-position: 60vw 20vh;
     }
   }
 `;
