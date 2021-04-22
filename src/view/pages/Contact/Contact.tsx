@@ -40,7 +40,7 @@ const Contact = () => {
         Napisz do mnie, jeżeli chcesz nawiązać współpracę
       </Box>
       <div>e-mail: marcinczaniecki97@gmail.com</div>
-      <Form name="contact" method="post">
+      <Form name="contact" method="post" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <Label>
           Twój e-mail:
