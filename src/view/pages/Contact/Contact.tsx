@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Box from "components/molecules/Box/Box";
-import Button from "components/atoms/Button/Button";
+//import Button from "components/atoms/Button/Button";
 
 const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   gap: 20px;
 `;
-
+/* 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ const Textarea = styled.textarea`
   padding: 20px 30px;
   border: 3px solid ${({ theme }) => theme.color.primary};
   border-radius: 30px;
-`;
+`; */
 
 const Contact = () => {
   return (
