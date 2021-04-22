@@ -49,7 +49,7 @@ const Contact = () => {
         <Label>
           Twoja Wiadomość:
           <Textarea
-            name="content"
+            name="message"
             placeholder="W czym mogę Ci pomóc?"
           ></Textarea>
         </Label>
