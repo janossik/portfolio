@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import Home from "view/pages/Home";
 import { theme } from "theme/theme";
 
+//react-router-dom is used for future expansion
 const Root = () => {
   return (
     <ThemeProvider theme={theme}>

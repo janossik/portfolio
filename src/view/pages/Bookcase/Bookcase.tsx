@@ -34,7 +34,7 @@ const Bookcase = () => {
       description="Here are the books I'm going to read"
     >
       {bookcase.map((book) => {
-        return <Book {...book} />;
+        return <Book key={book.title + book.authors[0]} {...book} />;
       })}
     </Chapter>
   );

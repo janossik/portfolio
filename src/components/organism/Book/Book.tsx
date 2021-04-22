@@ -26,7 +26,9 @@ const Book = ({ title, subtitles, authors, status }: IBook) => {
           {title}
         </Title>
         {subtitles.map((subtitle) => (
-          <Title tag="h4">{subtitle}</Title>
+          <Title key={subtitle} tag="h4">
+            {subtitle}
+          </Title>
         ))}
       </header>
       <section>
