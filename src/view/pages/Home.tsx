@@ -2,6 +2,7 @@ import MainTemplate from "view/templates/MainTemplate";
 import logo from "assets/logo.svg";
 import Hero from "components/organism/Hero/Hero";
 import Portfolio from "components/organism/Portfolio/Portfolio";
+import Bookcase from "components/organism/Bookcase/Bookcase";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         entrusted duties.
       </Hero>
       <Portfolio />
+      <Bookcase />
     </MainTemplate>
   );
 };

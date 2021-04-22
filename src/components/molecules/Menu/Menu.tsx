@@ -51,16 +51,30 @@ const Menu = ({ active, setActive }: IActiveState) => {
         to="portfolio"
         spy={true}
         smooth={true}
-        offset={50}
-        duration={500}
+        offset={0}
+        duration={1000}
         onClick={() => setActive(false)}
       >
         Portfolio
       </MenuLink>
-      <MenuLink to="/bokcase" onClick={() => setActive(false)}>
-        Bokcase
+      <MenuLink
+        to="bookcase"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={1000}
+        onClick={() => setActive(false)}
+      >
+        Bookcase
       </MenuLink>
-      <MenuLink to="/contact" onClick={() => setActive(false)}>
+      <MenuLink
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={1000}
+        onClick={() => setActive(false)}
+      >
         Contact
       </MenuLink>
       <p>Where do you wanna go?</p>

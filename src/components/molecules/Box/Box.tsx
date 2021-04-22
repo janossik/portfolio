@@ -12,7 +12,7 @@ const Wrapper = styled.section`
 const Box = ({ title, children, url, linkText }: IBox) => {
   return (
     <Wrapper>
-      <Title tag="h2" primary>
+      <Title tag="h2" size="xl" primary>
         {title}
       </Title>
       <p>{children}</p>
