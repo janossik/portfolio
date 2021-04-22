@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Box from "components/molecules/Box/Box";
 //import Button from "components/atoms/Button/Button";
+import NetlifyForm from "react-netlify-form";
 
 const Wrapper = styled.article`
   display: flex;
@@ -40,27 +41,24 @@ const Contact = () => {
         Napisz do mnie, jeżeli chcesz nawiązać współpracę
       </Box>
       <div>e-mail: marcinczaniecki97@gmail.com</div>
-      <form name="contact" method="post">
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message"></textarea>
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+      <NetlifyForm name="Contact Form">
+        {({ loading, error, success }) => (
+          <div>
+            {loading && <div>Loading...</div>}
+            {error && (
+              <div>Your information was not sent. Please try again later.</div>
+            )}
+            {success && <div>Thank you for contacting us!</div>}
+            {!loading && !success && (
+              <div>
+                <input type="text" name="Name" required />
+                <textarea name="Message" required />
+                <button>Submit</button>
+              </div>
+            )}
+          </div>
+        )}
+      </NetlifyForm>
     </Wrapper>
   );
 };
