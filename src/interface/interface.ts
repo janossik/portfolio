@@ -43,3 +43,9 @@ export interface IChapter extends IComponentWithChildren {
   title: string;
   description: string;
 }
+export interface IBook {
+  title: string;
+  subtitles: string[];
+  authors: string[];
+  status: "plans" | "read" | "readed";
+}

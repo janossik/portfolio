@@ -3,8 +3,16 @@ import GlobalStyle from "theme/GlobalStyle";
 import TopBar from "components/organism/TopBar/TopBar";
 import { IComponentWithChildren } from "interface/interface";
 import logo from "assets/logo_v2.svg";
+import ArrowScroll from "components/atoms/ArrowScroll/ArrowScroll";
 
 const Wrapper = styled.main`
+  @keyframes coming {
+    0% {
+    }
+    100% {
+    }
+  }
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -49,6 +57,13 @@ const MainTemplate = ({ children }: IComponentWithChildren) => {
       <GlobalStyle />
       <TopBar />
       <Wrapper>{children}</Wrapper>
+      <ArrowScroll
+        to="root"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={1000}
+      />
     </>
   );
 };
