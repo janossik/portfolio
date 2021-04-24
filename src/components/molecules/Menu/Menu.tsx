@@ -3,7 +3,7 @@ import MenuLink from "components/atoms/MenuLink/MenuLink";
 import { IActiveState } from "types/types";
 import { Wrapper } from "./Menu.styles";
 
-const links = ["Portfolio", "Bookcase", "Contact"];
+const links = ["Portfolio", "Biblioteczka", "Kontakt"];
 
 const Menu = ({ active, setActive }: IActiveState) => {
   return (

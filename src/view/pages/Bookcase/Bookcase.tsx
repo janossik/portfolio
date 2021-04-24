@@ -17,7 +17,7 @@ const Bookcase = () => {
   if (data) {
     return (
       <Chapter
-        id="bookcase"
+        id="biblioteczka"
         title="Biblioteczka"
         description="Tutaj znajdują się książki, które planuje przeczytać, czytam lub przeczytałem"
       >

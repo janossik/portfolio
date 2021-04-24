@@ -44,7 +44,7 @@ const Textarea = styled.textarea`
 
 const Contact = () => {
   return (
-    <Wrapper id="contact">
+    <Wrapper id="kontakt">
       <section>
         <Box title="Kontakt">
           Napisz do mnie, jeżeli chcesz nawiązać współpracę
