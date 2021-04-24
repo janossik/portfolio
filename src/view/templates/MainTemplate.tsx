@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import GlobalStyle from "theme/GlobalStyle";
 import TopBar from "components/organism/TopBar/TopBar";
-import { IComponentWithChildren } from "interface/interface";
+import { IComponentWithChildren } from "types/types";
 import logo from "assets/logo_v2.svg";
 import ArrowScroll from "components/atoms/ArrowScroll/ArrowScroll";
 
@@ -39,7 +39,8 @@ const Wrapper = styled.main`
     max-width: 1024px;
     margin: 0 auto;
   }
-  @media (min-width: ${({ theme }) => theme.screenSize.desktop}) {
+  @media (min-width: ${({ theme }) => theme.screenSize.desktop.small}) {
+    padding-top: 80px;
     &::after {
       background-position: 60vw 30vh;
     }

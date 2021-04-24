@@ -1,43 +1,33 @@
+import { IBook } from "types/types";
+import { useQuery } from "react-query";
 import Chapter from "components/organism/Chapter/Chapter";
 import Book from "components/organism/Book/Book";
-import { IBook } from "interface/interface";
-
-const bookcase: IBook[] = [
-  {
-    title: "Agile",
-    subtitles: ["Przewodnik po zwinnych metodykach programowania"],
-    authors: ["Andrew Stellman", "Jennifer Greene"],
-    status: "plans",
-  },
-  {
-    title: "Czysty kod",
-    subtitles: ["Podręcznik dobrego programisty"],
-    authors: ["Robert C. Martin"],
-    status: "read",
-  },
-  {
-    title: "Czysta architektura",
-    subtitles: [
-      "Struktura i design oprogramowania",
-      "Przewodnik dla profesjonalistów",
-    ],
-    authors: ["Robert C. Martin"],
-    status: "readed",
-  },
-];
+import Loading from "components/atoms/Loading/Loading";
+import { fetchBook } from "queries/fetch";
 
 const Bookcase = () => {
-  return (
-    <Chapter
-      id="bookcase"
-      title="Bookcase"
-      description="Here are the books I'm going to read"
-    >
-      {bookcase.map((book) => {
-        return <Book key={book.title + book.authors[0]} {...book} />;
-      })}
-    </Chapter>
-  );
+  const { isLoading, data } = useQuery<IBook[]>("books", fetchBook);
+  if (isLoading) {
+    return <Loading />;
+  } // @ts-ignore: Unreachable code error
+  if (data?.error) {
+    return <div></div>;
+  }
+  console.log(data);
+  if (data) {
+    return (
+      <Chapter
+        id="biblioteczka"
+        title="Biblioteczka"
+        description="Tutaj znajdują się książki, które planuje przeczytać, czytam lub przeczytałem"
+      >
+        {data?.map((book) => {
+          return <Book key={book.id} {...book} />;
+        })}
+      </Chapter>
+    );
+  }
+  return <div>404</div>;
 };
 
 export default Bookcase;
