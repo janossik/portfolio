@@ -21,7 +21,6 @@ export interface IHero extends IBox {
   alt?: string;
 }
 export interface ISign {
-  id: string;
   src: string;
   alt: string;
   url: string;
@@ -29,13 +28,25 @@ export interface ISign {
 
 export interface ISignpost {
   vertical?: boolean;
-  signs: ISign[];
+  page: string;
+  github: string;
 }
 export interface ICard {
-  id: string;
+  id: number;
+  name: string;
   src: string;
-  signs: ISign[];
-  techStack: string[];
+  page: string;
+  github: string;
+  published_at: string;
+  created_at: string;
+  updated_at: string;
+  tech_stack: {
+    id: number;
+    name: string;
+    published_at: string;
+    created_at: string;
+    updated_at: string;
+  }[];
 }
 
 export interface IChapter extends IComponentWithChildren {
@@ -44,8 +55,9 @@ export interface IChapter extends IComponentWithChildren {
   description: string;
 }
 export interface IBook {
+  id: number;
   title: string;
-  subtitles: string[];
-  authors: string[];
+  subtitle: string;
+  authors: { id: number; name: string }[];
   status: "plans" | "read" | "readed";
 }

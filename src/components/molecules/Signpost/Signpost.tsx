@@ -1,20 +1,13 @@
-import styled from "styled-components";
+import githubSVG from "assets/github.svg";
+import pageSVG from "assets/page.svg";
 import Sign from "components/atoms/Sign/Sign";
-import { ISignpost } from "interface/interface";
+import { ISignpost } from "types/types";
+import { Wrapper } from "./Signpost.styles";
 
-const Wrapper = styled.div<{ vertical?: boolean }>`
-  display: flex;
-  width: ${({ vertical }) => (vertical ? "60px" : "auto")};
-  height: ${({ vertical }) => (vertical ? "auto" : "60px")};
-  flex-direction: ${({ vertical }) => (vertical ? "column" : "row")};
-  gap: 10px;
-`;
-
-const Signpost = ({ vertical, signs }: ISignpost) => (
+const Signpost = ({ vertical, page, github }: ISignpost) => (
   <Wrapper vertical={vertical}>
-    {signs.map((props) => {
-      return <Sign key={props.id} {...props} />;
-    })}
+    <Sign src={pageSVG} alt={"icon website"} url={page} />
+    <Sign src={githubSVG} alt={"icon github"} url={github} />
   </Wrapper>
 );
 

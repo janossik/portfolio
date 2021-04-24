@@ -1,23 +1,7 @@
-import styled from "styled-components";
-import { IComponentWithChildren } from "interface/interface";
+import { IComponentWithChildren } from "types/types";
+import { Wrapper } from "./Mesh.styles";
 
-const Wrapper = styled.article`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  @media (min-width: ${({ theme }) => theme.screenSize.tablet}) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  @media (min-width: ${({ theme }) => theme.screenSize.desktop.small}) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-  @media print {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-`;
+//the potential development of this component
 
 const Mesh = ({ children }: IComponentWithChildren) => {
   return <Wrapper>{children}</Wrapper>;

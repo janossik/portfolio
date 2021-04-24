@@ -8,13 +8,14 @@ import Contact from "./Contact/Contact";
 const Home = () => {
   return (
     <MainTemplate>
-      <Hero title={`I'm Marcin`} url="https://github.com/janossik" src={logo}>
-        A third-year computer science student with a front end specialization,
-        constantly expanding his knowledge, which he willingly shares by
-        providing tutoring in programming and computer graphics for 3 years.
-        Developing skills in the field of broadly understood digitization.
-        Characterized by an ambitious and responsible approach to performing the
-        entrusted duties.
+      <Hero
+        title={`Cześć, jestem Marcin!`}
+        url="https://github.com/janossik"
+        src={logo}
+        linkText="GitHub"
+      >
+        Student trzeciego roku informatyki o specjalności front end, zapraszam
+        ciebie tutaj do zobaczenia moich projektów i mojej
       </Hero>
       <Portfolio />
       <Bookcase />
