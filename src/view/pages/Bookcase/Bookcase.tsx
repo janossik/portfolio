@@ -1,8 +1,8 @@
-import { IBook } from "types/types";
 import { useQuery } from "react-query";
 import Chapter from "components/organism/Chapter/Chapter";
 import Book from "components/organism/Book/Book";
 import Loading from "components/atoms/Loading/Loading";
+import { IBook } from "types/types";
 import { fetchBook } from "queries/fetch";
 
 const Bookcase = () => {
