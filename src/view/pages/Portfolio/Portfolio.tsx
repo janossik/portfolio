@@ -8,8 +8,18 @@ import { fetchCard } from "queries/fetch";
 const Portfolio = () => {
   const { isLoading, data } = useQuery<ICard[]>("portfolioCard", fetchCard);
   if (isLoading) {
-    return <Loading />;
-  } // @ts-ignore: Unreachable code error
+    return (
+      <>
+        <p style={{ textAlign: "center", paddingBottom: "20px" }}>
+          Prawdopodobnie trwa uruchamianie backendu na Heroku, to może zająć
+          chwilę.
+        </p>
+        <Loading />
+      </>
+    );
+  }
+  console.log(data);
+  // @ts-ignore: Unreachable code error
   if (data?.error) {
     return <div></div>;
   }
@@ -18,7 +28,7 @@ const Portfolio = () => {
       <Chapter
         id="portfolio"
         title="Portfolio"
-        description="Tutaj znajdują się moje projekty niekomercyjne"
+        description="Tutaj znajdują się moje projekty niekomercyjne, jeżeli chcesz sprawdzić jakiś projekt możesz kliknąć w ilustracje!"
       >
         <>
           {data?.map((props) => {

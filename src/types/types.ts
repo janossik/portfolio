@@ -61,3 +61,9 @@ export interface IBook {
   authors: { id: number; name: string }[];
   status: "plans" | "read" | "readed";
 }
+
+export interface IModal {
+  children: React.ReactElement;
+  active: boolean;
+  setActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
