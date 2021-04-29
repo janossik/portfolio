@@ -6,6 +6,7 @@ import { Wrapper, Background } from "./Modal.styles";
 
 const Modal = ({ children, active, setActive }: IModal) => {
   const ModalContainer = document.createElement("div");
+
   useEffect(() => {
     document.body.prepend(ModalContainer);
     return () => {
@@ -13,12 +14,16 @@ const Modal = ({ children, active, setActive }: IModal) => {
     };
   });
 
+  const closeModal = () => {
+    setActive(false);
+  };
+
   return ReactDOM.createPortal(
     <>
       {active && (
-        <Background onClick={() => setActive(false)}>
+        <Background onClick={closeModal}>
           <Wrapper>
-            <CloseButton onClick={() => setActive(false)} />
+            <CloseButton onClick={closeModal} />
             {children}
           </Wrapper>
         </Background>

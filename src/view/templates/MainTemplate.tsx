@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import GlobalStyle from "theme/GlobalStyle";
 import TopBar from "components/organism/TopBar/TopBar";
-import { IComponentWithChildren } from "types/types";
 import logo from "assets/logo_v2.svg";
-import ArrowScroll from "components/atoms/ArrowScroll/ArrowScroll";
+import { IChildren } from "types/types";
+import Footer from "components/organism/Footer/Footer";
 
 const Wrapper = styled.main`
   @keyframes coming {
@@ -52,19 +52,13 @@ const Wrapper = styled.main`
   }
 `;
 
-const MainTemplate = ({ children }: IComponentWithChildren) => {
+const MainTemplate = ({ children }: IChildren) => {
   return (
     <>
       <GlobalStyle />
       <TopBar />
       <Wrapper>{children}</Wrapper>
-      <ArrowScroll
-        to="root"
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration={1000}
-      />
+      <Footer />
     </>
   );
 };

@@ -1,7 +1,32 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const LeftComing = keyframes`
+    0% {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+`;
+const RightComing = keyframes`
+    0% {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+`;
 
 export const Wrapper = styled.article`
   position: relative;
+  &:nth-child(odd) {
+    animation: ${LeftComing} 1s ease-out;
+  }
+  animation: ${RightComing} 1s ease-out;
   p {
     display: none;
   }
@@ -36,6 +61,10 @@ export const View = styled.img`
   object-fit: cover;
   border: solid 1px ${({ theme }) => theme.color.primary};
   cursor: pointer;
+  :hover {
+    transform: scale(1.1);
+    transition: 100ms;
+  }
 `;
 
 export const Content = styled.section`

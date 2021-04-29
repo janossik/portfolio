@@ -18,7 +18,6 @@ const Portfolio = () => {
       </>
     );
   }
-  console.log(data);
   // @ts-ignore: Unreachable code error
   if (data?.error) {
     return <div></div>;

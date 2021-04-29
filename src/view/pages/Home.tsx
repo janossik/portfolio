@@ -14,8 +14,10 @@ const Home = () => {
         src={logo}
         linkText="GitHub"
       >
-        Student trzeciego roku informatyki o specjalności front end, zapraszam
-        ciebie tutaj do zobaczenia moich projektów i mojej
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ullam
+        nesciunt dignissimos amet consectetur iure. Ut vero eaque, deserunt
+        dolor cumque tenetur ullam dignissimos modi natus delectus aspernatur.
+        Beatae, tenetur!
       </Hero>
       <Portfolio />
       <Bookcase />
