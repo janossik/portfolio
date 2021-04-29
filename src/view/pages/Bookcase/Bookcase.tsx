@@ -13,7 +13,6 @@ const Bookcase = () => {
   if (data?.error) {
     return <div></div>;
   }
-  console.log(data);
   if (data) {
     return (
       <Chapter

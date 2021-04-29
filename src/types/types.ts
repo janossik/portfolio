@@ -5,7 +5,7 @@ export interface IActiveState {
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export interface IComponentWithChildren {
+export interface IChildren {
   children: React.ReactElement | React.ReactElement[];
 }
 
@@ -49,7 +49,7 @@ export interface ICard {
   }[];
 }
 
-export interface IChapter extends IComponentWithChildren {
+export interface IChapter extends IChildren {
   id?: string;
   title: string;
   description: string;

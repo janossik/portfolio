@@ -14,7 +14,7 @@ const Book = ({ title, subtitle, authors, status }: IBook) => {
         </Title>
       </header>
       <section>
-        Authors:
+        Autorzy:
         <ul>
           {authors.map(({ id, name }) => (
             <li key={id}>{name}</li>

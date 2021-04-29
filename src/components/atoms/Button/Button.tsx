@@ -7,6 +7,7 @@ const Button = styled.button`
   min-width: 135px;
   margin-right: auto;
   padding-bottom: 5px;
+  background-color: transparent;
   font-size: ${({ theme }) => theme.font.size.l};
   font-weight: ${({ theme }) => theme.font.weight.bold};
   color: ${({ theme }) => theme.color.primary};
