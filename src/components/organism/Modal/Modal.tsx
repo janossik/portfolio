@@ -4,13 +4,15 @@ import CloseButton from "components/atoms/CloseButton/CloseButton";
 import { IModal } from "types/types";
 import { Wrapper, Background } from "./Modal.styles";
 
+const modalContainer = document.getElementById("modal-container");
+
 const Modal = ({ children, active, setActive }: IModal) => {
-  const ModalContainer = document.createElement("div");
+  const modalNode = document.createElement("div");
 
   useEffect(() => {
-    document.body.prepend(ModalContainer);
+    modalContainer?.prepend(modalNode);
     return () => {
-      ModalContainer.remove();
+      modalNode.remove();
     };
   });
 
@@ -29,7 +31,7 @@ const Modal = ({ children, active, setActive }: IModal) => {
         </Background>
       )}
     </>,
-    ModalContainer
+    modalNode
   );
 };
 
