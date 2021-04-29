@@ -1,18 +1,18 @@
-import { useEffect } from "react";
-import ReactDOM from "react-dom";
-import CloseButton from "components/atoms/CloseButton/CloseButton";
-import { IModal } from "types/types";
-import { Wrapper, Background } from "./Modal.styles";
+import { useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import CloseButton from 'components/atoms/CloseButton/CloseButton';
+import { IModal } from 'types/types';
+import { Wrapper, Background } from './Modal.styles';
+
+const ModalContainer = document.createElement('div');
 
 const Modal = ({ children, active, setActive }: IModal) => {
-  const ModalContainer = document.createElement("div");
-
   useEffect(() => {
     document.body.prepend(ModalContainer);
     return () => {
       ModalContainer.remove();
     };
-  });
+  }, []);
 
   const closeModal = () => {
     setActive(false);
