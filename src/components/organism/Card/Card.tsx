@@ -6,7 +6,7 @@ import Iframe from "components/atoms/Iframe/Iframe";
 import { ICard } from "types/types";
 import { Wrapper, Content, View } from "./Card.styles";
 
-const Card = ({ name, src, page, github, tech_stack }: ICard) => {
+const Card = ({ name, page, image, github, tech_stack }: ICard) => {
   const [active, setActive] = useState(false);
   return (
     <>
@@ -23,7 +23,7 @@ const Card = ({ name, src, page, github, tech_stack }: ICard) => {
           {name}
         </Title>
         <View
-          src={src}
+          src={`http://159.89.177.40${image.url}`}
           alt={"View screenshot"}
           width="100%"
           onClick={() => setActive(true)}

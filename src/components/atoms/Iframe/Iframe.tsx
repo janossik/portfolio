@@ -6,6 +6,8 @@ const Iframe = styled.iframe`
   border: none;
   background: ${({ theme }) => theme.color.background};
   margin: auto;
+  object-fit: contain;
+  transition: 0;
 `;
 
 export default Iframe;

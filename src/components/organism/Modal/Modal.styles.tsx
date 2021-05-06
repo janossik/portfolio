@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   padding-top: 30px;
   height: calc(90% + 50px);
   width: 90%;
+
   @media (min-width: ${({ theme }) => theme.screenSize.desktop.small}) {
     height: calc(576px + 50px);
     width: 1024px;

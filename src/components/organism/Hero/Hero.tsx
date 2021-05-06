@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Box from "components/molecules/Box/Box";
-import { IHero } from "types/types";
 import { Wrapper } from "./Hero.styles";
 import styled from "styled-components";
+import { IHero } from "types/types";
 
 const IMG = styled.div<{ rot?: number; src?: string }>`
   display: block;
@@ -29,7 +29,7 @@ const IMG = styled.div<{ rot?: number; src?: string }>`
   }
 `;
 
-const Hero = ({ title, children, src, alt, url, linkText = "more" }: IHero) => {
+const Hero = ({ title, children, src, url, linkText = "more" }: IHero) => {
   const [rot, setRot] = useState(0);
   const [active, setActive] = useState(false);
   const ref = useRef<HTMLImageElement>(null);
