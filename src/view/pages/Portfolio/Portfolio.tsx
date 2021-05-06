@@ -30,7 +30,7 @@ const Portfolio = () => {
         description="Tutaj znajdują się moje projekty niekomercyjne, jeżeli chcesz sprawdzić jakiś projekt możesz kliknąć w ilustracje!"
       >
         <>
-          {data?.map((props) => {
+          {data.map((props) => {
             return <Card key={props.id} {...props} />;
           })}
         </>

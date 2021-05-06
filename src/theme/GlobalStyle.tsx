@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
       background:  #868686;
     }
 
+
 `;
 
 export default GlobalStyle;

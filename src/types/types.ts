@@ -16,10 +16,6 @@ export interface IBox {
   linkText?: string;
 }
 
-export interface IHero extends IBox {
-  src?: string;
-  alt?: string;
-}
 export interface ISign {
   src: string;
   alt: string;
@@ -34,7 +30,9 @@ export interface ISignpost {
 export interface ICard {
   id: number;
   name: string;
-  src: string;
+  image: {
+    url: string;
+  };
   page: string;
   github: string;
   published_at: string;
@@ -66,4 +64,23 @@ export interface IModal {
   children: React.ReactElement;
   active: boolean;
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface IHeroData {
+  id: number;
+  created_at: string;
+  updated_at: string;
+  title: string;
+  description: string;
+  image: { url: string };
+  url: string;
+  linkText: string;
+}
+
+export interface IHero {
+  title: string;
+  children: string;
+  src: string;
+  url: string;
+  linkText?: string;
 }
