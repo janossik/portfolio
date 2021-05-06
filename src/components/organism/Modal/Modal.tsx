@@ -5,8 +5,8 @@ import { IModal } from "types/types";
 import { Wrapper, Background } from "./Modal.styles";
 
 const modalContainer = document.getElementById("modal-container");
-
 const modalNode = document.createElement("div");
+        
 const Modal = ({ children, active, setActive }: IModal) => {
   useEffect(() => {
     modalContainer?.prepend(modalNode);
