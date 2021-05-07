@@ -10,20 +10,19 @@ import { IHeroData } from "types/types";
 
 const Home = () => {
   const { isLoading, data } = useQuery<IHeroData>("portfolioHero", fetchHero);
+  console.log();
   if (isLoading) {
-    return (
-      <>
-        <p style={{ textAlign: "center", paddingBottom: "20px" }}>
-          Prawdopodobnie trwa uruchamianie backendu na Heroku, to może zająć
-          chwilę.
-        </p>
-        <Loading />
-      </>
-    );
+    return <Loading />;
   }
   // @ts-ignore: Unreachable code error
   if (data?.error) {
-    return <div></div>;
+    return (
+      <MainTemplate>
+        <Portfolio />
+        <Bookcase />
+        <Contact />
+      </MainTemplate>
+    );
   }
   if (data) {
     console.log(data.image.url);
@@ -32,7 +31,7 @@ const Home = () => {
         <Hero
           title={data.title}
           url={data.url ? data.url : "https://github.com/janossik"}
-          src={`http://159.89.177.40${data.image.url}`}
+          src={`https://marcincz.pl${data.image.url}`}
           linkText={data.linkText ? data.linkText : "Github"}
         >
           {data.description}

@@ -23,7 +23,7 @@ const Card = ({ name, page, image, github, tech_stack }: ICard) => {
           {name}
         </Title>
         <View
-          src={`http://159.89.177.40${image.url}`}
+          src={`https://marcincz.pl${image.url}`}
           alt={"View screenshot"}
           width="100%"
           onClick={() => setActive(true)}

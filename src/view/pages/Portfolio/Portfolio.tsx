@@ -7,16 +7,9 @@ import { fetchCard } from "queries/fetch";
 
 const Portfolio = () => {
   const { isLoading, data } = useQuery<ICard[]>("portfolioCard", fetchCard);
+  console.log(data);
   if (isLoading) {
-    return (
-      <>
-        <p style={{ textAlign: "center", paddingBottom: "20px" }}>
-          Prawdopodobnie trwa uruchamianie backendu na Heroku, to może zająć
-          chwilę.
-        </p>
-        <Loading />
-      </>
-    );
+    return <Loading />;
   }
   // @ts-ignore: Unreachable code error
   if (data?.error) {
